@@ -1,0 +1,105 @@
+{
+  "nodes": {
+    "agmsg": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788154256,
+        "narHash": "sha256-exfzU+DtLhvw6khobXnrUPk3DZLpnajAmUK7jdHxn5k=",
+        "owner": "fujibee",
+        "repo": "agmsg",
+        "rev": "c1b52f8f933685b7d6299dd8ce83df15459b3a33",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fujibee",
+        "repo": "agmsg",
+        "type": "github"
+      }
+    },
+    "git-number": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1773981351,
+        "narHash": "sha256-OxHhOsasnf6iAIBufbfyO1p3REWWG68wyRevzsEeTrk=",
+        "owner": "holygeek",
+        "repo": "git-number",
+        "rev": "8c922c2fe29a579427f0bf518c9e7d43519e399a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "holygeek",
+        "repo": "git-number",
+        "type": "github"
+      }
+    },
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1788146656,
+        "narHash": "sha256-XmJmvk9rytTb7dCotO/aqR+YysB8HOqnprlOdv+LAF4=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "82c265faf4e3161d6015db07c9b0f1ee36a9029b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "master",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nix-darwin": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1786845137,
+        "narHash": "sha256-oQFip+v0luP8NIxJzmiW4Wu8bILsbFWom5l0zonl8hQ=",
+        "owner": "nix-darwin",
+        "repo": "nix-darwin",
+        "rev": "4cff07de74b50e64bdd68cd4e722ab5b6b35ee48",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-darwin",
+        "ref": "master",
+        "repo": "nix-darwin",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1789960332,
+        "narHash": "sha256-MQ5my6vvo0z2iVQcKqrysutFWvsNw3/ynNxzjJon4yc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "35e212742ceab4ae1dcfbfd9039a39215c816e8e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "agmsg": "agmsg",
+        "git-number": "git-number",
+        "home-manager": "home-manager",
+        "nix-darwin": "nix-darwin",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

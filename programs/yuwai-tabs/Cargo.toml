@@ -1,0 +1,22 @@
+[package]
+name = "yuwai-tabs"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+cargo-clippy = []
+
+[dependencies]
+objc = "0.2.7"
+libc = "0.2"
+objc2 = "0.6.5"
+objc2-app-kit = { version = "0.3.2", default-features = false, features = [
+    "std", "libc", "NSApplication", "NSRunningApplication", "NSWorkspace",
+    "NSPanel", "NSView", "NSWindow", "NSResponder", "NSGraphics", "NSScreen", "NSAppearance", "NSColor",
+] }
+objc2-foundation = { version = "0.3.2", default-features = false, features = [
+    "std", "NSArray", "NSString", "NSObject", "NSGeometry",
+] }
+objc2-core-foundation = { version = "0.3.2", default-features = false, features = [
+    "std", "CFBase", "CFString",
+] }

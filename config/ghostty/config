@@ -1,0 +1,115 @@
+# theme
+# theme = catppuccin-frappe
+macos-icon = chalkboard
+macos-icon-frame = chrome
+
+# cmd <--> ctrl
+keybind = cmd+a=text:\x01
+keybind = cmd+b=text:\x02
+keybind = cmd+c=text:\x03
+keybind = cmd+d=text:\x04
+keybind = cmd+e=text:\x05
+keybind = cmd+f=text:\x06
+keybind = cmd+g=text:\x07
+keybind = cmd+h=text:\x08
+keybind = cmd+i=text:\x09
+keybind = cmd+j=text:\x0A
+keybind = cmd+k=text:\x0B
+keybind = cmd+l=text:\x0C
+keybind = cmd+m=text:\x0D
+keybind = cmd+n=text:\x0E
+keybind = cmd+o=text:\x0F
+keybind = cmd+p=text:\x10
+keybind = cmd+r=text:\x12
+keybind = cmd+s=text:\x13
+keybind = cmd+t=text:\x14
+keybind = cmd+u=text:\x15
+keybind = cmd+v=text:\x16
+keybind = cmd+x=text:\x18
+keybind = cmd+y=text:\x19
+keybind = cmd+z=text:\x1A
+keybind = cmd+n=new_window
+
+keybind = cmd+up=text:\x1B[A
+keybind = cmd+down=text:\x1B[B
+keybind = cmd+right=text:\x1B[C
+keybind = cmd+left=text:\x1B[D
+keybind = cmd+home=text:\x1B[H
+keybind = cmd+end=text:\x1B[F
+keybind = cmd+page_up=text:\x1B[5~
+keybind = cmd+page_down=text:\x1B[6~
+keybind = cmd+escape=text:\x1B
+keybind = cmd+enter=text:\x0D
+keybind = cmd+tab=text:\x09
+keybind = cmd+backspace=text:\x08
+
+keybind = cmd+f1=text:\x1B[11~
+keybind = cmd+f2=text:\x1B[12~
+keybind = cmd+f3=text:\x1B[13~
+keybind = cmd+f4=text:\x1B[14~
+keybind = cmd+f5=text:\x1B[15~
+keybind = cmd+f6=text:\x1B[17~
+keybind = cmd+f7=text:\x1B[18~
+keybind = cmd+f8=text:\x1B[19~
+keybind = cmd+f9=text:\x1B[20~
+keybind = cmd+f10=text:\x1B[21~
+keybind = cmd+f11=text:\x1B[23~
+keybind = cmd+f12=text:\x1B[24~
+
+keybind = ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+
+keybind = alt+f=text:\x1bf
+keybind = alt+b=text:\x1bb
+keybind = alt+d=text:\x1bd
+
+macos-option-as-alt = left
+
+# visibility
+# keybind = global:f12=toggle_visibility
+# keybind = global:shift+ctrl+d=toggle_visibility
+# keybind = global:shift+cmd+d=toggle_quick_terminal
+keybind = "ctrl+f=text:\x03"
+
+# for tmux
+
+# Cmd+T → tmux: Ctrl+T のあとに c（新規ウィンドウ）
+keybind = cmd+t=text:\x14c
+
+# Cmd+W → tmux: Ctrl+T->&
+keybind = cmd+w=text:\x14&
+# Cmd+D → tmux: Ctrl+T->%
+keybind = cmd+shift+t=text:\x14%
+# Cmd+Shift+D → tmux: Ctrl+T->"
+# keybind = cmd+shift+y=text:\x14\"
+
+# Cmd+1/2/3 → tmux: Ctrl+T->1/2/3
+keybind = cmd+1=text:\x141
+keybind = cmd+2=text:\x142
+keybind = cmd+3=text:\x143
+
+# Cmd+F → tmux: Ctrl+T->/
+keybind = cmd+f=text:\x14/
+
+# ctrl+[ → tmux: Ctrl+T->p
+keybind = cmd+shift+left_bracket=text:\x14p
+
+# ctrl+] → tmux: Ctrl+T->n
+keybind = cmd+shift+right_bracket=text:\x14n
+
+# Ctrl+Shift+↑ → tmux: Ctrl-t ↑
+keybind = cmd+shift+right=text:\x14o
+
+# Ctrl+Shift+↓ → tmux: Ctrl-t ↓
+keybind = cmd+shift+left=text:\x14;
+
+
+keybind = ctrl+shift+left_bracket=previous_tab
+keybind = ctrl+shift+right_bracket=next_tab
+
+macos-titlebar-style = tabs
+macos-window-buttons = hidden
+
+
+window-width = 140
+window-height = 40

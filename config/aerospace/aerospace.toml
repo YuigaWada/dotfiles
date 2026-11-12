@@ -1,0 +1,79 @@
+# macOS Desktop 1 is Chrome; AeroSpace arranges windows on Desktop 2.
+# AeroSpace cannot restrict itself to a native macOS Desktop. Keep Chrome
+# floating so its window is not tiled when it is seen from another Desktop.
+config-version = 2
+start-at-login = false
+auto-reload-config = true
+default-root-container-layout = 'accordion'
+default-root-container-orientation = 'horizontal'
+# Keep accordion windows at the same origin.
+accordion-padding = 0
+persistent-workspaces = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+on-focused-monitor-changed = []
+after-startup-command = [
+  'layout --workspace 2 --root h_tiles',
+  'layout --workspace 3 --root v_tiles',
+  'layout --workspace 4 --root h_tiles',
+  'layout --workspace 9 --root h_accordion',
+]
+exec-on-workspace-change = ['/run/current-system/sw/bin/aerospace-actions', 'workspace-layout']
+
+# Default working layout margins.
+gaps.inner.horizontal = 12
+gaps.inner.vertical = 12
+gaps.outer.left = 80
+gaps.outer.right = 80
+gaps.outer.top = 20
+gaps.outer.bottom = 20
+
+[[on-window-detected]]
+if = 'test %{app-bundle-id} = com.google.Chrome'
+run = 'layout floating'
+
+[mode.main.binding]
+alt-v = 'layout --root tiles accordion'
+alt-x = 'focus --wrap-around dfs-prev'
+alt-c = 'focus --wrap-around dfs-next'
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+alt-9 = 'workspace 9'
+
+# The host swaps the physical Command and Control keys. These are the logical
+# modifiers received by AeroSpace.
+ctrl-shift-a = 'exec-and-forget /run/current-system/sw/bin/aerospace-actions focus-running com.google.Chrome "Google Chrome"'
+ctrl-shift-x = 'exec-and-forget /run/current-system/sw/bin/aerospace-actions focus-running md.obsidian Obsidian'
+ctrl-shift-s = 'exec-and-forget /run/current-system/sw/bin/aerospace-actions focus-running com.tinyspeck.slackmacgap Slack'
+ctrl-shift-c = 'exec-and-forget /run/current-system/sw/bin/aerospace-actions focus-running com.microsoft.VSCode "Visual Studio Code"'
+ctrl-shift-e = 'exec-and-forget /run/current-system/sw/bin/aerospace-actions focus-running com.apple.finder Finder'
+ctrl-shift-q = 'exec-and-forget /run/current-system/sw/bin/aerospace-actions focus-running com.apple.Preview Preview'
+ctrl-shift-d = 'exec-and-forget /run/current-system/sw/bin/aerospace-actions focus-running com.mitchellh.ghostty Ghostty'
+ctrl-shift-left = 'workspace --wrap-around prev'
+ctrl-shift-right = 'workspace --wrap-around next'
+ctrl-shift-leftSquareBracket = 'exec-and-forget /run/current-system/sw/bin/yuwai-tabs prev'
+ctrl-shift-rightSquareBracket = 'exec-and-forget /run/current-system/sw/bin/yuwai-tabs next'
+ctrl-shift-o = 'exec-and-forget /run/current-system/sw/bin/aerospace-actions save-app'
+ctrl-shift-z = 'exec-and-forget /run/current-system/sw/bin/aerospace-actions recall-app'
+# These targets are AeroSpace's virtual workspaces, not macOS Spaces.
+ctrl-shift-1 = 'move-node-to-workspace 1'
+ctrl-shift-2 = 'move-node-to-workspace 2'
+ctrl-shift-3 = 'move-node-to-workspace 3'
+ctrl-shift-4 = 'move-node-to-workspace 4'
+ctrl-shift-5 = 'move-node-to-workspace 5'
+ctrl-shift-6 = 'move-node-to-workspace 6'
+ctrl-shift-7 = 'move-node-to-workspace 7'
+ctrl-shift-8 = 'move-node-to-workspace 8'
+ctrl-shift-9 = 'move-node-to-workspace 9'

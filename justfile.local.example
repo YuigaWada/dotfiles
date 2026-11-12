@@ -1,0 +1,4 @@
+# Copy to justfile.local for machine/private recipes. justfile.local is ignored.
+#
+# private-example:
+#     command-that-must-not-be-committed
