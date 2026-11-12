@@ -6,7 +6,7 @@
 ## getting started
 
 0. `cd "$HOME"`
-1. `git clone git@github.com:YuigaWada/dotzsh.git`
-2. `mv dotzsh .zsh`
+1. `git clone https://github.com/YuigaWada/dotfiles.git`
+2. `mv dotfiles .zsh`
 3. `cd .zsh`
 4. `./scripts/bootstrap-nix.sh --install-nix --interactive`
