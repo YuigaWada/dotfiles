@@ -9,20 +9,22 @@
 
 let
   isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
-  homeDirectory = if isDarwin then identity.darwin.homeDirectory else identity.ubuntu.homeDirectory;
+  platformIdentity = if isDarwin then identity.darwin else identity.ubuntu;
+  username = platformIdentity.username;
+  homeDirectory = platformIdentity.homeDirectory;
   emacsPackage = pkgs.emacs-nox;
   agmsgVersion = lib.removeSuffix "\n" (builtins.readFile "${inputs.agmsg}/VERSION");
   codexDefaultPermissions = ":danger-full-access";
   claudeDefaultPermissionMode = "auto";
   personalGitIdentity =
     let
-      name = lib.toLower identity.username;
+      name = lib.toLower username;
     in
-    lib.hasInfix "yuiga" name && lib.hasInfix "wada" name;
+    if isDarwin then lib.hasInfix "yuiga" name && lib.hasInfix "wada" name else name == "initial";
 in
 {
   home = {
-    username = identity.username;
+    inherit username;
     inherit homeDirectory;
     stateVersion = "26.05";
 

@@ -8,7 +8,7 @@
 }:
 
 let
-  username = identity.username;
+  username = identity.darwin.username;
   homeDirectory = identity.darwin.homeDirectory;
   loadYabaiScriptingAddition = pkgs.writeShellScript "load-yabai-scripting-addition" ''
     set -eu

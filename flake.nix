@@ -41,11 +41,12 @@
       runtimeHome = builtins.getEnv "DOTFILES_HOME";
       hasRuntimeIdentity = runtimeUsername != "" && runtimeHome != "";
       currentIdentity = identity // {
-        username = runtimeUsername;
         darwin = identity.darwin // {
+          username = runtimeUsername;
           homeDirectory = runtimeHome;
         };
         ubuntu = identity.ubuntu // {
+          username = runtimeUsername;
           homeDirectory = runtimeHome;
         };
       };
@@ -242,7 +243,7 @@
                   inherit inputs;
                   identity = profileIdentity;
                 };
-                users.${profileIdentity.username}.imports = [
+                users.${profileIdentity.darwin.username}.imports = [
                   ./nix/home/common.nix
                   ./nix/home/macos.nix
                 ];
@@ -261,8 +262,8 @@
       };
 
       homeConfigurations = {
-        "${identity.username}@ubuntu-x86_64" = ubuntuX86;
-        "${identity.username}@ubuntu-aarch64" = ubuntuArm;
+        "${identity.ubuntu.username}@ubuntu-x86_64" = ubuntuX86;
+        "${identity.ubuntu.username}@ubuntu-aarch64" = ubuntuArm;
       }
       // lib.optionalAttrs hasRuntimeIdentity {
         "current@ubuntu-x86_64" = currentUbuntuX86;
